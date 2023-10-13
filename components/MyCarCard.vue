@@ -35,7 +35,7 @@
     },
     methods: {
       async deleteCar() {
-        await this.$axios.delete(`http://localhost:8000/v1/cars/${this.id}`)
+        await this.$axios.delete(`https://api-jumat.joyniso.com/v1/cars/${this.id}`)
         await this.$emit('reload')
       }
     }

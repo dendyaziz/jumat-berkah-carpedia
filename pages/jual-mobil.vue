@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     save() {
-      this.$axios.post('http://localhost:8000/v1/cars', {
+      this.$axios.post('https://api-jumat.joyniso.com/v1/cars', {
         name: this.name,
         year: this.year,
         description: this.description,

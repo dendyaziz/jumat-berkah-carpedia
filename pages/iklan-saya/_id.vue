@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     getCar() {
-      this.$axios.get(`http://localhost:8000/v1/cars/${this.$route.params.id}`)
+      this.$axios.get(`https://api-jumat.joyniso.com/v1/cars/${this.$route.params.id}`)
         .then(response => {
           const car = response.data.data
           this.name = car.name
@@ -59,7 +59,7 @@ export default {
         })
     },
     save() {
-      this.$axios.put(`http://localhost:8000/v1/cars/${this.$route.params.id}`, {
+      this.$axios.put(`https://api-jumat.joyniso.com/v1/cars/${this.$route.params.id}`, {
         name: this.name,
         year: this.year,
         description: this.description,

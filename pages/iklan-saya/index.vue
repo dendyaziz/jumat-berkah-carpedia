@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     async getAllCar() {
-      const response = await this.$axios.get('http://localhost:8000/v1/my-cars')
+      const response = await this.$axios.get('https://api-jumat.joyniso.com/v1/my-cars')
       this.carList = response.data.data
     }
   }

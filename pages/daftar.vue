@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     login() {
-      this.$axios.post('http://localhost:8000/v1/register', {
+      this.$axios.post('https://api-jumat.joyniso.com/v1/register', {
         name: this.name,
         email: this.email,
         password: this.password,
@@ -59,7 +59,7 @@ export default {
         })
     },
     getUser() {
-      this.$axios.get('http://localhost:8000/v1/me')
+      this.$axios.get('https://api-jumat.joyniso.com/v1/me')
         .then(response => {
           this.$auth.setUser(response.data.data)
           this.$router.push('/')

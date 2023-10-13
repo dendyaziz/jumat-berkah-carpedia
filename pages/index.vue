@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     async getAllCar() {
-      const response = await this.$axios.get('http://localhost:8000/v1/cars')
+      const response = await this.$axios.get('https://api-jumat.joyniso.com/v1/cars')
       this.carList = response.data.data
     }
   }
