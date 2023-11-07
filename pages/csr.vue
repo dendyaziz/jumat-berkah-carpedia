@@ -19,18 +19,13 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const response = await $axios.get('https://api-jumat.joyniso.com/v1/cars')
-    console.log(response.data.data)
-
+  data() {
     return {
-      carList: response.data.data,
+      carList: []
     }
   },
   mounted() {
-    if (!this.carList.length) {
-      this.getAllCar()
-    }
+    this.getAllCar()
   },
   methods: {
     async getAllCar() {
